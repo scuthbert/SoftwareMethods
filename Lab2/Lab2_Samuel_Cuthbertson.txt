@@ -1,0 +1,37 @@
+Name: Samuel Cuthbertson
+Section: 101
+
+#Step 2:
+diff fruitsOld.txt fruitsNew.txt
+diff -c fruitsOld.txt fruitsNew.txt
+
+#Step 3:
+wc -l testPasswd.txt
+wc -m testPasswd.txt
+
+#Step 4:
+cut -d: -f1 < testPasswd.txt
+cut -d' ' -f2,4 < grades.txt
+
+#Step 5:
+cut -d: -f4 testPasswd.txt | sort -t: -n -k4
+cut -d: -f4 testPasswd.txt | sort -t: -n -k4 > ~/test.txt
+grep -E '^m.*|^w.*|^s.*' testPasswd.txt | cut -d: -f6
+
+#Step 6:
+sed 's/[a-zA-Z]//g' leetSpeak.txt
+sed 's/[0-9]//g' leetSpeak.txt
+sed 's/[0-9]/_/g' leetSpeak.txt
+#I have no idea how I'd do this with pipes.
+sed -e 's/[3]/e/g' -e 's/[4]/a/g' -e 's/[0]/o/g' -e 's/[5]/s/g' -e 's/[7]/t/g' -e 's/[1]/i/g' leetSpeak.txt
+
+#Step 7:
+awk '{print $1, $2, ($4+$5+$6+$7+$8)/5}' grades.txt
+awk '{total+=$3}; END {print total/7}' grades.txt
+
+#Step 8:
+grep -P '\d{3}-\d{3}-\d{4}' regex_practice_data.txt | wc -l
+grep -P '303-441-\d{4}' regex_practice_data.txt | wc -l
+grep -P '\w@\w' regex_practice_data.txt | wc -l
+grep -P '\.gov' regex_practice_data.txt | wc -l
+grep -P '[A-Ma-m]+\.([A-Ma-m]\.)?[A-Ma-m]+@' regex_practice_data.txt | wc -l

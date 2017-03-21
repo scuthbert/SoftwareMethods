@@ -1,0 +1,34 @@
+Name: Samuel Cuthbertson
+Section: 101
+
+Task 1:
+mkdir cs3308
+cd cs3308
+
+cp testfile.txt testfile2.txt
+
+rm testfile2.txt
+
+mkdir tmp
+rmdir tmp
+cat testfile.txt
+
+less testfile.txt
+
+head testfile.txt
+
+tail testfile.txt
+
+find
+
+find
+
+zip -r dir.zip ./
+
+mkdir tmp
+unzip dir.zip ./tmp
+
+Task 2:
+sort passwds.txt
+
+sort -t: 

@@ -1,0 +1,1 @@
+wc -l passwds.txt
